@@ -60,7 +60,7 @@ default:
 
 //task 3
 
-let student = (name: "Ivan", surname: "Tabachnikov", sursurname: "Sisa")
+let student = (name: "Ivan", surname: "Tabachnikov", sursurname: "Andreevich")
 
 switch student {
 case (let name, _, _) where name.hasPrefix("A") || name.hasPrefix("O"):
