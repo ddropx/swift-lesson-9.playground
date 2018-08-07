@@ -60,18 +60,18 @@ default:
 
 //task 3
 
-let student = (name: "Ivan", surname: "Tabachnikov", sursurname: "Andreevich")
+let student = (name: "Иван", surname: "Табачников", middlename: "Андреевич")
 
 switch student {
-case (let name, _, _) where name.hasPrefix("A") || name.hasPrefix("O"):
+case (let name, _, _) where name.hasPrefix("А") && name.hasPrefix("О"):
     print ("Hello \(student.name)")
-case (_, _, let sursurname) where sursurname.hasPrefix ("V") || sursurname.hasPrefix ("D"):
+case (_, _, let middlename) where middlename.hasPrefix ("В") && middlename.hasPrefix ("Д"):
     print ("Hello \(student.name) \(student.sursurname)")
-case (_, let surname, _) where surname.hasPrefix("E") || surname.hasPrefix("Z"):
+case (_, let surname, _) where surname.hasPrefix("Е") || surname.hasPrefix("З"):
     print ("Hello \(student.surname)")
     
 default:
-    print ("Hello \(student.surname) \(student.name) \(student.sursurname)")
+    print ("Hello \(student.surname) \(student.name) \(student.middlename)")
 }
 
 
