@@ -90,3 +90,25 @@ case ("C", 7), ("E", 9), ("A", 3):
 default:
     print ("Miss")
 }
+
+
+
+// task 4.1
+
+//let seaBattlefield = (("A", 1...10), ("B", 1...10), ("C", 1...10), ("D", 1...10), ("E", 1...10), ("F", 1...10), ("G", 1...10), ("H", 1...10), ("I", 1...10), ("J", 1...10))
+
+var fourdeckShip = ("A", 1...4)
+var threedeckShip = (("B", 6...8), ("C", 2...4), ("D", 6...8))
+var twodeckShip = (("F", 2...3), ("H", 9...10))
+let onedeckShip = (("J", 1), ("G", 5), ("F", 7), ("A", 10))
+
+var firstShot = ("A", 2)
+
+switch firstShot {
+case ("J", 1), ("G", 5), ("F", 7), ("A", 10):
+    print("Got a kill")
+case ("A", 1...4), ("B", 6...8), ("C", 2...4), ("D", 6...8), ("F", 2...3), ("H", 9...10):
+    print("Got a hit")
+default:
+    print("Got a miss")
+}
