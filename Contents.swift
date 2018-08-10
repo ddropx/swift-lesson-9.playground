@@ -116,7 +116,7 @@ default:
 
 
 
-// task 4.2
+// task 4.2 - новое задание на пятницу
 
 var seaBattlefield = (x:1...10, y:1...10) // x = vertical, y = horizontal
 
@@ -124,8 +124,6 @@ var fourdeckShip = (1, 1...4)
 var threedeckShip = ((2, 6...8), (3, 2...4), (4, 6...8))
 var twodeckShip = ((6...7, 2), (4...5, 10))
 var onedeckShip = ((10, 1), (7, 5), (6, 7), (1, 10))
-
-//print("hello my name is \(seaBattlefield.y)")
 
 var firstShot = (4, 10)
 switch firstShot {
@@ -137,8 +135,18 @@ default:
 print("Got a miss")
 }
 
-print("Coordinates of fourdeck ship are \(fourdeckShip)")
-print("Coordinates of our first shot are \(firstShot)")
+let anyCoordinate = (1,1)             // Задаваемая координата
 
-
+switch anyCoordinate {
+case (10, 1), (8, 5), (6, 7), (1, 10):
+print("Here is onedeck ship")
+case (1, 1...4):
+print("Here is fourdeck ship")
+case (2, 6...8), (3, 2...4), (4, 6...8):
+print("Here is threedeck ship")
+case (6...7, 2), (4...5, 10):
+print("Here is twodeckship")
+default:
+print("There is no deck at this coordinate")
+}
 
